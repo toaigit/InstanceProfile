@@ -1,0 +1,2 @@
+There are 2 policies file BasicPolicy.json and PolicyS3Bucket.json.
+You can update FullS3Policy.json to add more permission if needed.

@@ -1,0 +1,29 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:ListBucket",
+                "ec2:AllocateAddress",
+                "ec2:AssociateAddress",
+                "ec2:AssociateIamInstanceProfile",
+                "ec2:AttachVolume",
+                "ec2:DescribeVolumeStatus",
+                "ec2:DescribeVolumes",
+                "ec2:DescribeInstanceStatus",
+                "ec2:DescribeInstances",
+                "iam:PassRole"
+             ],
+            "Resource": "*"
+        },
+        {
+          "Effect": "Allow",
+          "Action": [
+             "route53:ChangeResourceRecordSets"
+             ],
+          "Resource": "arn:aws:route53:::hostedzone/Z31ZKLVWNIK5AL"
+        }
+    ]
+}

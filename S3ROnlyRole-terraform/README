@@ -1,0 +1,35 @@
+There are two json file - AssumeRolePolicy.json  ROnlyS3Policy.json. The ROnlyS3Policy
+file contains the list of S3 privileges the instance can do.  Modify this file if needed.
+
+The following policy will be needed to manage the Instance Profile.  You need
+to create This policy and grant this policy to the AWS User who are going to
+create this IAMInstanceProfile.
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "iam:CreateInstanceProfile",
+                "iam:DeleteInstanceProfile",
+                "iam:RemoveRoleFromInstanceProfile",
+                "iam:DetachRolePolicy",
+                "iam:ListInstanceProfiles",
+                "iam:DeletePolicyVersion",
+                "iam:CreatePolicy",
+                "iam:DeletePolicy",
+                "iam:DeleteRole",
+                "iam:AttachRolePolicy",
+                "iam:DetachUserPolicy",
+                "iam:TagRole",
+                "ec2:AssociateIamInstanceProfile",
+                "ec2:DisassociateIamInstanceProfile",
+                "ec2:DescribeIamInstanceProfileAssociations",
+                "iam:AddRoleToInstanceProfile",
+                "iam:PassRole"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
+}

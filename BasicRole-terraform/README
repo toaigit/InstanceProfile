@@ -1,0 +1,5 @@
+This basic Instance profile BasicRole enables the instance to:
+   get files from S3 bucket
+   Attache the ebs volumes
+   Perform DNS push
+   Describe Instance
