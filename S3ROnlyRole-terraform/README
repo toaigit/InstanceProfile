@@ -33,3 +33,22 @@ create this IAMInstanceProfile.
         }
     ]
 }
+
+MORE EXAMPLE WITH MORE RESTRICT TO PASSROLE:
+For example, you might attach the following policy to a user. It gives the user full EC2 permissions, which includes the ability to launch instances.
+
+{
+   "Version": "2012-10-17",
+   "Statement": [{
+      "Effect":"Allow",
+      "Action":["ec2:*"],
+      "Resource":"*"
+    },
+    {
+      "Effect":"Allow",
+      "Action":"iam:PassRole",
+      "Resource":"arn:aws:iam::123456789012:role/S3Access"
+    }]
+}
+Notice that the second statement is for the PassRole action, and that the Resource element specifies the ARN of a role named S3Access. When the user launches an EC2 instance, that user is allowed to associate only the S3Access role with the instance. When an application is running in the instances that are launched by this user, that application can perform only the actions that are permitted by whatever is defined in the S3Access role.
+
