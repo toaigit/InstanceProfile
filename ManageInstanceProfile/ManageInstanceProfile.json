@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "iam:CreateInstanceProfile",
+                "iam:DeleteInstanceProfile",
+                "iam:RemoveRoleFromInstanceProfile",
+                "iam:DetachRolePolicy",
+                "iam:ListInstanceProfiles",
+                "iam:DeletePolicyVersion",
+                "iam:CreatePolicy",
+                "iam:DeletePolicy",
+                "iam:DeleteRole",
+                "iam:AttachRolePolicy",
+                "iam:DetachUserPolicy",
+                "iam:TagRole",
+                "ec2:AssociateIamInstanceProfile",
+                "ec2:DisassociateIamInstanceProfile",
+                "ec2:DescribeIamInstanceProfileAssociations",
+                "iam:AddRoleToInstanceProfile",
+                "iam:PassRole"
+            ],
+            "Effect": "Allow",
+            "Resource": "*"
+        }
+    ]
+}
